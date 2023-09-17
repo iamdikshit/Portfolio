@@ -6,8 +6,8 @@ import { SmallCards, Button, Blob } from "../ui";
 
 const Hero = () => {
   return (
-    <section className="hero px-4 md:px-16 lg:px-28 ">
-      <div className="inner-herosection relative grid grid-cols-1 gap-24  md:grid-cols-2 md:gap-12 mx-auto mt-24">
+    <section className="hero px-4 md:px-16 lg:px-28 mt-32 ">
+      <div className="inner-herosection relative grid grid-cols-1 gap-44 md:grid-cols-2 md:gap-12 mx-auto mt-24">
         <Blob
           classess={
             "bg-green-200 opacity-70 -top-28 -left-20 animate-blob-bounce blur-2xl "
@@ -53,7 +53,6 @@ const Hero = () => {
                 "text-sm lg:text-base px-8 py-4 text-black font-bold border-solid border-2 border-black rounded-xl "
               }
               divClass={"bg-black"}
-              textColor={"text-white"}
             />
           </div>
         </div>

@@ -4,6 +4,7 @@ import htmlpic from "@/public/images/htmlpic.png";
 import CSSLogo from "@/public/images/CSSLogo.png";
 import Jslogo from "@/public/images/Jslogo.png";
 import reactlogo from "@/public/images/reactlogo.png";
+import fitness from "@/public/images/fitness.jpg";
 
 export const images = {
   logo1,
@@ -12,4 +13,5 @@ export const images = {
   CSSLogo,
   Jslogo,
   reactlogo,
+  fitness,
 };

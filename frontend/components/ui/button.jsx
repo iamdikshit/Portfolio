@@ -9,9 +9,7 @@ const Button = (props) => {
         <div
           className={`absolute translate-y-48   h-72 w-72 rounded-full transition-all duration-[500ms] ease-out group-hover:-translate-y-0 ${props.divClass}  `}
         ></div>
-        <span className={`relative group-hover:${props.textColor}`}>
-          {props.text}
-        </span>
+        <span className={`relative group-hover:text-white`}>{props.text}</span>
       </button>
     );
   else
