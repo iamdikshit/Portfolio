@@ -2,27 +2,31 @@
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
 import { images } from "@/public/images";
-import { SmallCards, Button } from "../ui";
+import { SmallCards, Button, Blob } from "../ui";
 
 const Hero = () => {
   return (
-    <section className="hero px-4 md:px-8 lg:px-16">
-      <div className="inner-herosection grid grid-cols-1 gap-24  md:grid-cols-2 md:gap-12 mx-auto mt-24">
+    <section className="hero px-4 md:px-16 lg:px-28 ">
+      <div className="inner-herosection relative grid grid-cols-1 gap-24  md:grid-cols-2 md:gap-12 mx-auto mt-24">
+        <Blob
+          classess={
+            "bg-green-200 opacity-70 -top-28 -left-20 animate-blob-bounce blur-2xl "
+          }
+        />
+
         {/* // left section */}
         <div className="left-section flex flex-col items-center justify-center lg:items-start ">
-          <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-b from-red-900 to-pink-500 bg-clip-text text-transparent py-2">
-            Hey! I'm
-          </h1>
-          <br />
+          <h1 className="text-4xl lg:text-7xl font-bold mb-4 ">👋 Hey! I'm</h1>
+
           <TypeAnimation
             className="text-3xl  lg:text-5xl font-bold bg-gradient-to-b from-[#5b1aaa] to-[#00d4ff] bg-clip-text text-transparent pb-2  "
             sequence={[
               // Same substring at the start will only be typed out once, initially
               "Full Stack Develper.",
               1000, // wait 1s before replacing "Mice" with "Hamsters"
-              "Web Designer.",
+              "Code Creator.",
               1000,
-              "Javascript Developer.",
+              "Problem Solver.",
               1000,
             ]}
             wrapper="span"
@@ -30,24 +34,33 @@ const Hero = () => {
             style={{}}
             repeat={Infinity}
           />
+
+          <p className="mt-6 text-sm lg:text-lg text-gray-600 text-center lg:text-left ">
+            "Let's work together to transform your vision into a digital
+            reality. Get in touch today!"
+          </p>
           <div className="hero-btn mt-8 flex items-center gap-4">
-            <Button
-              text={"Resume"}
-              classess={
-                "text-base px-8 py-2 text-white bg-black border-solid border-2 border-black rounded-full "
-              }
-            />
             <Button
               text={"Hire me"}
               classess={
-                "text-base px-8 py-2 text-black border-solid border-2 border-black rounded-full "
+                "text-sm lg:text-base px-8 py-4 text-white font-bold bg-black border-solid border-2 border-black rounded-xl hover:text-black hover:bg-white transition-all ease-in-out  "
               }
+            />
+            <Button
+              text={"Download CV"}
+              type={"special"}
+              classess={
+                "text-sm lg:text-base px-8 py-4 text-black font-bold border-solid border-2 border-black rounded-xl "
+              }
+              divClass={"bg-black"}
+              textColor={"text-white"}
             />
           </div>
         </div>
         {/* // Right section */}
         <div className="left-right   ">
           <div className="inner-right relative flex items-center justify-center">
+            <Blob classess={"bg-blue-300 blur-xl animate-blob  "} />
             <Image
               className="rounded-full shadow-2xl border "
               src={images.profile}

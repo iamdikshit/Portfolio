@@ -1,22 +1,41 @@
+"use client";
+
 import Image from "next/image";
 import { images } from "@/public/images";
 import { IoApps, IoCloseCircleOutline } from "react-icons/io5";
+import { useState } from "react";
 const Nav = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const showMenuHandler = () => {
+    setShowMenu((prev) => !prev);
+  };
   return (
-    <header className="h-20 md:h-24 flex items-center justify-between bg-white px-4 md:px-8 lg:px-16 ">
+    <header className="h-20 relative md:h-24 flex items-center justify-between bg-transparent px-4 md:px-16 lg:px-28 ">
       <Image src={images.logo1} width={200} height={100} />
-      <nav className="hidden">
-        <ul className="hidden md:flex items-center gap-4">
-          <li>Home</li>
-          <li>About</li>
-          <li>Project</li>
-          <li>Resume</li>
-        </ul>
-      </nav>
-      <button>
-        <IoApps className="w-6 h-6" />
-        <IoCloseCircleOutline className="w-6 h-6 hidden" />
-      </button>
+
+      {showMenu ? (
+        <button onClick={showMenuHandler} className=" z-50">
+          <IoCloseCircleOutline className="w-6 h-6 " />
+        </button>
+      ) : (
+        <button onClick={showMenuHandler} className=" z-50">
+          <IoApps className=" w-6 h-6" />
+        </button>
+      )}
+
+      {showMenu && (
+        <div className=" bg-white  fixed h-screen w-full z-30 top-0 left-0 flex items-center justify-center">
+          <nav className=" ">
+            <ul className="flex flex-col items-center gap-4 uppercase">
+              <li>Home</li>
+              <li>About</li>
+              <li>Project</li>
+              <li>Resume</li>
+            </ul>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
