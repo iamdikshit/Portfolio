@@ -1,6 +1,7 @@
 import React from "react";
 import { Blob, SkillCard } from "../ui";
 import { images } from "@/public/images";
+import Image from "next/image";
 const Skill = () => {
   return (
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36">
@@ -63,19 +64,27 @@ const Skill = () => {
           />
         </div>
         <div className="mt-8 flex items-center justify-center">
-          <p className="text-sm md:text-base lg:text-lg text-gray-600">
-            <span>"</span>As a Full Stack Web Developer, I possess a
-            comprehensive skill set encompassing the entire web development
-            spectrum. I excel in both frontend and backend development, creating
-            responsive user interfaces with HTML, CSS, and JavaScript, as well
-            as architecting server-side logic with Node.js. JavaScript is my
-            forte, allowing me to craft interactive and dynamic web experiences
-            using libraries like React and Nextjs framework on the frontend, and
-            Node.js on the backend. Additionally, my keen eye for web design
-            principles ensures that my creations not only function flawlessly
-            but also delight users with visually appealing and intuitive
-            interfaces, showcasing the harmonious fusion of design aesthetics
-            with robust development capabilities.
+          <p className="text-sm relative md:text-base lg:text-lg text-gray-600">
+            <span className="md:absolute static -top-5 -left-6">
+              <Image
+                src={images.quotation}
+                width={30}
+                height={30}
+                alt={"quotation"}
+              />
+            </span>
+            As a Full Stack Web Developer, I possess a comprehensive skill set
+            encompassing the entire web development spectrum. I excel in both
+            frontend and backend development, creating responsive user
+            interfaces with HTML, CSS, and JavaScript, as well as architecting
+            server-side logic with Node.js. JavaScript is my forte, allowing me
+            to craft interactive and dynamic web experiences using libraries
+            like React and Nextjs framework on the frontend, and Node.js on the
+            backend. Additionally, my keen eye for web design principles ensures
+            that my creations not only function flawlessly but also delight
+            users with visually appealing and intuitive interfaces, showcasing
+            the harmonious fusion of design aesthetics with robust development
+            capabilities.
           </p>
         </div>
       </div>

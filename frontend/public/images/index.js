@@ -6,6 +6,7 @@ import Jslogo from "@/public/images/Jslogo.png";
 import reactlogo from "@/public/images/reactlogo.png";
 import fitness from "@/public/images/fitness.jpg";
 import movie from "@/public/images/movie.jpg";
+import quotation from "@/public/images/quotation.png";
 
 export const images = {
   logo1,
@@ -16,4 +17,5 @@ export const images = {
   reactlogo,
   fitness,
   movie,
+  quotation,
 };
