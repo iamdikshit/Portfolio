@@ -2,11 +2,20 @@
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
 import { images } from "@/public/images";
-import { SmallCards, Button, Blob } from "../ui";
-
-const Hero = () => {
+import { SmallCards, Button, Blob, Loader } from "../ui";
+// import { urlFor } from "@/utils/client";
+import { useState } from "react";
+import { saveAs } from "file-saver";
+const Hero = ({ data }) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const saveFile = () => {
+    setIsLoading(true);
+    saveAs(data?.resume, "dikshitresume.pdf");
+    setIsLoading(false);
+  };
   return (
-    <section className="hero px-4 md:px-16 lg:px-28 mt-32 ">
+    <section className="hero relative px-4 md:px-16 lg:px-28 mt-32 ">
+      {isLoading && <Loader />}
       <div className="inner-herosection relative grid grid-cols-1 gap-44 md:grid-cols-2 md:gap-12 mx-auto mt-24">
         <Blob
           classess={
@@ -47,6 +56,7 @@ const Hero = () => {
               }
             />
             <Button
+              onClick={saveFile}
               text={"Download CV"}
               type={"special"}
               classess={
@@ -62,10 +72,10 @@ const Hero = () => {
             <Blob classess={"bg-blue-300 blur-xl animate-blob  "} />
             <Image
               className="rounded-full shadow-2xl border "
-              src={images.profile}
+              src={data?.image}
               width={350}
               height={350}
-              alt="Profile"
+              alt={data?.name}
             />
 
             <SmallCards

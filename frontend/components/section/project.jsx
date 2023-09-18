@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button, Blob } from "@/components/ui";
 import { images } from "@/public/images";
+import Link from "next/link";
 const Project = () => {
   return (
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
@@ -40,12 +41,14 @@ const Project = () => {
         />
       </div>
       <div className="mt-8 flex items-center justify-center">
-        <Button
-          text={"View all"}
-          classess={
-            "text-sm lg:text-base px-8 py-4 text-white font-bold bg-black border-solid border-2 border-black rounded-xl hover:text-black hover:bg-transparent transition-all ease-in-out  "
-          }
-        />
+        <Link href={"/project/all/"}>
+          <Button
+            text={"View all"}
+            classess={
+              "text-sm lg:text-base px-8 py-4 text-white font-bold bg-black border-solid border-2 border-black rounded-xl hover:text-black hover:bg-transparent transition-all ease-in-out  "
+            }
+          />
+        </Link>
       </div>
     </section>
   );

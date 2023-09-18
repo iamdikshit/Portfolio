@@ -119,6 +119,11 @@ export default defineField({
       type: 'url',
       description: 'Paste your intro video url.',
     }),
+    defineField({
+      title: 'Resume',
+      name: 'resume',
+      type: 'file',
+    }),
 
     // active or not
     defineField({

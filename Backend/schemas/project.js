@@ -13,6 +13,16 @@ export default defineField({
       title: 'Project Name',
       type: 'string',
     }),
+    defineField({
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 200, // will be ignored if slugify is set
+        slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+      },
+    }),
     // Work duration
     defineField({
       name: 'duration',

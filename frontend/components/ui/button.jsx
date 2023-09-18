@@ -4,6 +4,7 @@ const Button = (props) => {
   if (props.type === "special")
     return (
       <button
+        onClick={props.onClick}
         className={`group relative overflow-hidden flex items-center justify-center border-2 bg-transparent  font-bold ${props.classess}`}
       >
         <div
@@ -14,7 +15,7 @@ const Button = (props) => {
     );
   else
     return (
-      <button onClick={props.onclick} className={props.classess}>
+      <button onClick={props.onClick} className={props.classess}>
         {props.text}
       </button>
     );
