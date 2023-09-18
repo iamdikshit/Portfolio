@@ -9,9 +9,11 @@ const Card = (props) => {
       {/* Left section of card */}
       <div className="left-card flex flex-col items-center justify-center sm:items-start gap-4">
         <h1 className="text-xl md:text-2xl lg:text-4xl  font-bold text-center md:text-start">
-          Fitness Freek e-commerce website
+          {props.data?.title}
         </h1>
-        <p className="text-base md:text-lg text-gray-600">E-commerce website</p>
+        <p className="text-base md:text-lg text-gray-600">
+          {props.data?.description}
+        </p>
         <div className="group-btn flex gap-8">
           <Button
             text={"View"}
@@ -32,7 +34,7 @@ const Card = (props) => {
       {/* Right section of card */}
       <div className="right-card flex flex-col items-center justify-center">
         <Image
-          src={images.fitness}
+          src={props.data?.image}
           style={{ width: "70%", height: "auto" }}
           alt="Fitness"
         />

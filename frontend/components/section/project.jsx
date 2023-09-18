@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, Button, Blob } from "@/components/ui";
+import { images } from "@/public/images";
 const Project = () => {
   return (
-    <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36">
+    <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
       <Blob
         classess={
           "bg-red-200 opacity-70 top-0 -left-20 animate-blob-bounce blur-2xl "
@@ -13,9 +14,30 @@ const Project = () => {
         "Web Development Adventures: A Glimpse into My Creative World"
       </p>
       <div className="project-cards mt-6">
-        <Card classess={"bg-green-400"} />
-        <Card classess={"bg-blue-400"} />
-        <Card classess={"bg-yellow-400"} />
+        <Card
+          classess={"bg-green-400"}
+          data={{
+            image: images.fitness,
+            title: "Fitness Freek e-commerce website",
+            description: "Ecommerce website",
+          }}
+        />
+        <Card
+          classess={"bg-blue-400"}
+          data={{
+            image: images.fitness,
+            title: "Fitness Freek e-commerce website",
+            description: "Ecommerce website",
+          }}
+        />
+        <Card
+          classess={"bg-yellow-400"}
+          data={{
+            image: images.movie,
+            title: "Movie mania for blockbuster movies",
+            description: "Entertainment website",
+          }}
+        />
       </div>
       <div className="mt-8 flex items-center justify-center">
         <Button
