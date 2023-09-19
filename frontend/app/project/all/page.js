@@ -1,7 +1,10 @@
 // import Image from "next/image";
 import { Blob, Card } from "@/components/ui";
-import { images } from "@/public/images";
-export default function Project() {
+
+import { client } from "@/utils/client";
+export default async function Project() {
+  const { projectdata } = await getProject();
+
   return (
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
       <Blob
@@ -14,31 +17,44 @@ export default function Project() {
         "Web Development Adventures: A Glimpse into My Creative World"
       </p>
       <div className="project-cards mt-6">
-        <Card
-          classess={"bg-green-400"}
-          data={{
-            image: images.fitness,
-            title: "Fitness Freek e-commerce website",
-            description: "Ecommerce website",
-          }}
-        />
-        <Card
-          classess={"bg-blue-400"}
-          data={{
-            image: images.fitness,
-            title: "Fitness Freek e-commerce website",
-            description: "Ecommerce website",
-          }}
-        />
-        <Card
-          classess={"bg-yellow-400"}
-          data={{
-            image: images.movie,
-            title: "Movie mania for blockbuster movies",
-            description: "Entertainment website",
-          }}
-        />
+        {projectdata.map((project, index) => (
+          <Card
+            key={index}
+            classess={`bg-${
+              (index + 1) % 2 == 0
+                ? "green"
+                : (index + 1) % 3 == 0
+                ? "blue"
+                : "yellow"
+            }-400`}
+            data={{
+              image: project?.image,
+              title: project?.name,
+              description: "Ecommerce website",
+              slug: project?.slug,
+              live: project?.live,
+              github: project?.github,
+            }}
+          />
+        ))}
       </div>
     </section>
   );
+}
+
+async function getProject() {
+  const query = `*[_type=="project" && isactive==true]{
+  name,
+  "slug":slug.current,
+  description,
+    live,
+    github,
+    "image":media.images[0].asset->url,
+    }  `;
+
+  const projectdata = await client.fetch(query, { cache: "force-cache" });
+
+  return {
+    projectdata,
+  };
 }

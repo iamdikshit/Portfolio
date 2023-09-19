@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Button, Blob } from "@/components/ui";
 import { images } from "@/public/images";
 import Link from "next/link";
-const Project = () => {
+const Project = ({ projectdata }) => {
   return (
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
       <Blob
@@ -15,30 +15,22 @@ const Project = () => {
         "Web Development Adventures: A Glimpse into My Creative World"
       </p>
       <div className="project-cards mt-6">
-        <Card
-          classess={"bg-green-400"}
-          data={{
-            image: images.fitness,
-            title: "Fitness Freek e-commerce website",
-            description: "Ecommerce website",
-          }}
-        />
-        <Card
-          classess={"bg-blue-400"}
-          data={{
-            image: images.fitness,
-            title: "Fitness Freek e-commerce website",
-            description: "Ecommerce website",
-          }}
-        />
-        <Card
-          classess={"bg-yellow-400"}
-          data={{
-            image: images.movie,
-            title: "Movie mania for blockbuster movies",
-            description: "Entertainment website",
-          }}
-        />
+        {projectdata.map((project, index) => (
+          <Card
+            key={index}
+            classess={`bg-${
+              index === 0 ? "green" : index === 1 ? "blue" : "yellow"
+            }-400`}
+            data={{
+              image: project?.image,
+              title: project?.name,
+              description: "Ecommerce website",
+              slug: project?.slug,
+              live: project?.live,
+              github: project?.github,
+            }}
+          />
+        ))}
       </div>
       <div className="mt-8 flex items-center justify-center">
         <Link href={"/project/all/"}>

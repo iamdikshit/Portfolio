@@ -16,13 +16,32 @@ async function getHeroData() {
 }
 export default async function Home() {
   const { data } = await getHeroData();
+  const { projectdata } = await getProject();
+
   return (
     <>
       <main>
         <Hero data={data[0]} />
         <Skill />
-        <Project />
+        <Project projectdata={projectdata} />
       </main>
     </>
   );
+}
+
+async function getProject() {
+  const query = `*[_type=="project" && isactive==true][0...3]{
+  name,
+  "slug":slug.current,
+  description,
+    live,
+    github,
+    "image":media.images[0].asset->url,
+    }  `;
+
+  const projectdata = await client.fetch(query);
+
+  return {
+    projectdata,
+  };
 }
