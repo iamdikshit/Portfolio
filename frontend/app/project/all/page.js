@@ -20,13 +20,13 @@ export default async function Project() {
         {projectdata.map((project, index) => (
           <Card
             key={index}
-            classess={`bg-${
+            classess={`${
               (index + 1) % 2 == 0
-                ? "green"
+                ? "bg-blue-400"
                 : (index + 1) % 3 == 0
-                ? "blue"
-                : "yellow"
-            }-400`}
+                ? "bg-yellow-400"
+                : "bg-green-400"
+            }`}
             data={{
               image: project?.image,
               title: project?.name,

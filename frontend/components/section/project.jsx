@@ -18,9 +18,13 @@ const Project = ({ projectdata }) => {
         {projectdata.map((project, index) => (
           <Card
             key={index}
-            classess={`bg-${
-              index === 0 ? "green" : index === 1 ? "blue" : "yellow"
-            }-400`}
+            classess={`${
+              index === 0
+                ? "bg-green-400"
+                : index === 1
+                ? "bg-blue-400"
+                : "bg-yellow-400"
+            }`}
             data={{
               image: project?.image,
               title: project?.name,
