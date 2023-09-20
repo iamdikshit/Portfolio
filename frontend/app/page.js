@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import { Hero, Skill, Project } from "../components/section";
+import { Hero, Skill, Project, Connect } from "../components/section";
 import { client } from "@/utils/client";
 async function getHeroData() {
   const query = `*[_type=="about" && isactive==true ]{
@@ -17,13 +17,15 @@ async function getHeroData() {
 export default async function Home() {
   const { data } = await getHeroData();
   const { projectdata } = await getProject();
+  const { skillData } = await getSkill();
 
   return (
     <>
       <main>
         <Hero data={data[0]} />
-        <Skill />
+        <Skill skillData={skillData} />
         <Project projectdata={projectdata} />
+        <Connect />
       </main>
     </>
   );
@@ -43,5 +45,19 @@ async function getProject() {
 
   return {
     projectdata,
+  };
+}
+
+async function getSkill() {
+  const query = `*[_type=="skill"]{
+  skill,
+    "image":images.asset->url,
+}
+    `;
+
+  const skillData = await client.fetch(query, { cache: "force-cache" });
+
+  return {
+    skillData,
   };
 }

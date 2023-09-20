@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui";
-
+import PortableText from "react-portable-text";
 import Image from "next/image";
 import Link from "next/link";
 const Card = (props) => {
@@ -12,9 +12,11 @@ const Card = (props) => {
         <h1 className="text-xl md:text-2xl lg:text-4xl  font-bold text-center md:text-start">
           {props.data?.title}
         </h1>
-        <p className="text-base md:text-lg text-gray-600">
-          {props.data?.description}
-        </p>
+        <details>
+          <summary>Description</summary>
+          <PortableText content={props.data?.description} />
+        </details>
+
         <div className="group-btn flex gap-8">
           <Link href={props?.data?.github} target="_blank">
             <Button

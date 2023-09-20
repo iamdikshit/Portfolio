@@ -2,7 +2,7 @@ import React from "react";
 import { Blob, SkillCard } from "../ui";
 import { images } from "@/public/images";
 import Image from "next/image";
-const Skill = () => {
+const Skill = ({ skillData }) => {
   return (
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36">
       <Blob
@@ -26,42 +26,16 @@ const Skill = () => {
       </p>
       <div className="skill-innerSection grid grid-cols-1 gap-8 md:grid-cols-2 mt-8 ">
         <div className="skill-cards mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2  ">
-          <SkillCard
-            class={"bg-white  rounded-md"}
-            width={"50"}
-            height={"50"}
-            image={images.Jslogo}
-            text={"Javascript"}
-          />
-          <SkillCard
-            class={"bg-white  rounded-md"}
-            width={"50"}
-            height={"50"}
-            image={images.htmlpic}
-            text={"HTML"}
-          />
-          <SkillCard
-            class={"bg-white  rounded-md"}
-            width={"50"}
-            height={"50"}
-            image={images.CSSLogo}
-            text={"CSS"}
-          />
-          <SkillCard
-            class={"bg-white  rounded-md"}
-            width={"50"}
-            height={"50"}
-            image={images.Jslogo}
-            text={"Javascript"}
-          />
-
-          <SkillCard
-            class={"bg-white  rounded-md"}
-            width={"50"}
-            height={"50"}
-            image={images.Jslogo}
-            text={"Javascript"}
-          />
+          {skillData.map((skill, index) => (
+            <SkillCard
+              key={index}
+              class={"bg-white  rounded-md"}
+              width={"50"}
+              height={"50"}
+              image={skill.image}
+              text={skill.skill}
+            />
+          ))}
         </div>
         <div className="mt-8 flex items-center justify-center">
           <p className="text-sm relative md:text-base lg:text-lg text-gray-600">

@@ -6,6 +6,8 @@ import { SmallCards, Button, Blob, Loader } from "../ui";
 // import { urlFor } from "@/utils/client";
 import { useState } from "react";
 import { saveAs } from "file-saver";
+import Link from "next/link";
+
 const Hero = ({ data }) => {
   const [isLoading, setIsLoading] = useState(false);
   const saveFile = () => {
@@ -49,12 +51,14 @@ const Hero = ({ data }) => {
             reality. Get in touch today!"
           </p>
           <div className="hero-btn mt-8 flex items-center gap-4">
-            <Button
-              text={"Hire me"}
-              classess={
-                "text-sm lg:text-base px-8 py-4 text-white font-bold bg-black border-solid border-2 border-black rounded-xl hover:text-black hover:bg-white transition-all ease-in-out  "
-              }
-            />
+            <Link href={"/contact"}>
+              <Button
+                text={"Say Hello"}
+                classess={
+                  "text-sm lg:text-base px-8 py-4 text-white font-bold bg-black border-solid border-2 border-black rounded-xl hover:text-black hover:bg-white transition-all ease-in-out  "
+                }
+              />
+            </Link>
             <Button
               onClick={saveFile}
               text={"Download CV"}

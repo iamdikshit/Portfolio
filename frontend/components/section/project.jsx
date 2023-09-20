@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Button, Blob } from "@/components/ui";
-import { images } from "@/public/images";
 import Link from "next/link";
 const Project = ({ projectdata }) => {
   return (
@@ -28,7 +27,7 @@ const Project = ({ projectdata }) => {
             data={{
               image: project?.image,
               title: project?.name,
-              description: "Ecommerce website",
+              description: project?.description,
               slug: project?.slug,
               live: project?.live,
               github: project?.github,
