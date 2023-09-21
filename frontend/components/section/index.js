@@ -5,3 +5,4 @@ export { default as Footer } from "./footer";
 export { default as ProjectDetail } from "./projectdetail";
 export { default as Connect } from "./connect";
 export { default as ContactSection } from "./contact";
+export { default as AboutSection } from "./about";

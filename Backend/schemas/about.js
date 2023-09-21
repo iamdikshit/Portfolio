@@ -14,6 +14,11 @@ export default defineField({
       title: 'Name',
       type: 'string',
     }),
+    defineField({
+      name: 'email',
+      title: 'Email',
+      type: 'string',
+    }),
 
     // Profile pic
     defineField({

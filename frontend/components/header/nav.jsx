@@ -41,11 +41,7 @@ const Nav = () => {
                   Projects
                 </Link>
               </li>
-              <li>
-                <Link onClick={showMenuHandler} href={"/contact"}>
-                  Contact
-                </Link>
-              </li>
+
               <li>
                 <Link onClick={showMenuHandler} href={"/about"}>
                   About

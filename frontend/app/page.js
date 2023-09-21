@@ -4,6 +4,7 @@ import { client } from "@/utils/client";
 async function getHeroData() {
   const query = `*[_type=="about" && isactive==true ]{
   name,
+  email,
   "image":images.asset->url,
   "resume":resume.asset->url
 }`;
@@ -25,7 +26,7 @@ export default async function Home() {
         <Hero data={data[0]} />
         <Skill skillData={skillData} />
         <Project projectdata={projectdata} />
-        <Connect />
+        <Connect data={data[0]} />
       </main>
     </>
   );

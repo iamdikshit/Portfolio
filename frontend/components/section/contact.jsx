@@ -1,6 +1,23 @@
+"use client";
 import { Blob, Button } from "../ui";
 import { MdShield } from "react-icons/md";
+// import { sendMail } from "@/utils/mail.js";
+import { html } from "@/utils/mailTemplate.js";
 const ContactSection = () => {
+  const sendMailHandler = async () => {
+    try {
+      options = {
+        sender: "from@example.com",
+        receiver: "to@example.com",
+        subject: "Thankyou for connecting with us.",
+        html: html({ name: "Dikshit", subject: "Project colaboration" }),
+      };
+
+      // const info = await sendMail(options);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
       <Blob
@@ -60,6 +77,7 @@ const ContactSection = () => {
               </div>
             </div>
             <Button
+              onClick={sendMailHandler}
               text={"Send mail"}
               type={"special"}
               classess={

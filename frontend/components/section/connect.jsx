@@ -1,6 +1,6 @@
 import { Blob, Button } from "../ui";
 import Link from "next/link";
-const Connect = () => {
+const Connect = ({ data }) => {
   return (
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
       <Blob
@@ -23,7 +23,10 @@ const Connect = () => {
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-center leading-tight p-2 ">
           Have a project in mind? Let’s get to work.👋📫
         </h1>
-        <Link href={`/contact`}>
+        <Link
+          href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${data?.email}`}
+          target="_blank"
+        >
           <Button
             text={"Say Hello"}
             type={"special"}

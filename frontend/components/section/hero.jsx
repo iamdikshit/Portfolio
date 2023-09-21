@@ -51,7 +51,10 @@ const Hero = ({ data }) => {
             reality. Get in touch today!"
           </p>
           <div className="hero-btn mt-8 flex items-center gap-4">
-            <Link href={"/contact"}>
+            <Link
+              href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${data?.email}`}
+              target="_blank"
+            >
               <Button
                 text={"Say Hello"}
                 classess={
