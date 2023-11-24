@@ -78,7 +78,7 @@ const Hero = ({ data }) => {
           <div className="inner-right relative flex items-center justify-center">
             <Blob classess={"bg-blue-300 blur-xl animate-blob  "} />
             <Image
-              className="rounded-full shadow-2xl border "
+              className="rounded-full shadow-2xl"
               src={data?.image}
               width={350}
               height={350}

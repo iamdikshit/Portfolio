@@ -63,6 +63,15 @@ export default defineField({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
+
+    // short summary
+    // Live Link
+    defineField({
+      name: 'summary',
+      title: 'Summary',
+      type: 'text',
+      description: 'Short summary for your project.',
+    }),
     // Description
     defineField({
       name: 'description',

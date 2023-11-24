@@ -4,7 +4,6 @@ import { Blob, Card } from "@/components/ui";
 import { client } from "@/utils/client";
 export default async function Project() {
   const { projectdata } = await getProject();
-
   return (
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
       <Blob
@@ -16,7 +15,7 @@ export default async function Project() {
       <p className="text-sm md:text-base text-gray-600 mt-6">
         "Web Development Adventures: A Glimpse into My Creative World"
       </p>
-      <div className="project-cards mt-6">
+      <div className="project-cards mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 ">
         {projectdata.map((project, index) => (
           <Card
             key={index}
@@ -30,7 +29,9 @@ export default async function Project() {
             data={{
               image: project?.image,
               title: project?.name,
-              description: "Ecommerce website",
+              description: project.description,
+              summary: project?.summary,
+              technology: project.technology,
               slug: project?.slug,
               live: project?.live,
               github: project?.github,
@@ -46,6 +47,8 @@ async function getProject() {
   const query = `*[_type=="project" && isactive==true]{
   name,
   "slug":slug.current,
+   summary,
+   technology,
   description,
     live,
     github,

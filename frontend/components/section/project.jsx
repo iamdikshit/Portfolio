@@ -13,7 +13,7 @@ const Project = ({ projectdata }) => {
       <p className="text-sm md:text-base text-gray-600 mt-6">
         "Web Development Adventures: A Glimpse into My Creative World"
       </p>
-      <div className="project-cards mt-6">
+      <div className="project-cards mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 ">
         {projectdata.map((project, index) => (
           <Card
             key={index}
@@ -27,7 +27,9 @@ const Project = ({ projectdata }) => {
             data={{
               image: project?.image,
               title: project?.name,
-              description: project?.description,
+              description: project.description,
+              summary: project?.summary,
+              technology: project.technology,
               slug: project?.slug,
               live: project?.live,
               github: project?.github,
@@ -35,7 +37,7 @@ const Project = ({ projectdata }) => {
           />
         ))}
       </div>
-      <div className="mt-8 flex items-center justify-center">
+      <div className="mt-16 flex items-center justify-center">
         <Link href={"/project/all/"}>
           <Button
             text={"View all"}
@@ -50,3 +52,27 @@ const Project = ({ projectdata }) => {
 };
 
 export default Project;
+
+/*
+{projectdata.map((project, index) => (
+          <Card
+            key={index}
+            classess={`${
+              index === 0
+                ? "bg-green-400"
+                : index === 1
+                ? "bg-blue-400"
+                : "bg-yellow-400"
+            }`}
+            data={{
+              image: project?.image,
+              title: project?.name,
+              description: project.description,
+              slug: project?.slug,
+              live: project?.live,
+              github: project?.github,
+            }}
+          />
+        ))}
+
+*/

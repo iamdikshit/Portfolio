@@ -1,5 +1,11 @@
 // import Image from "next/image";
-import { Hero, Skill, Project, Connect } from "../components/section";
+import {
+  Hero,
+  Skill,
+  Project,
+  Connect,
+  ServiceSection,
+} from "../components/section";
 import { client } from "@/utils/client";
 async function getHeroData() {
   const query = `*[_type=="about" && isactive==true ]{
@@ -25,6 +31,7 @@ export default async function Home() {
       <main>
         <Hero data={data[0]} />
         <Skill skillData={skillData} />
+        <ServiceSection />
         <Project projectdata={projectdata} />
         <Connect data={data[0]} />
       </main>
@@ -36,6 +43,8 @@ async function getProject() {
   const query = `*[_type=="project" && isactive==true][0...3]{
   name,
   "slug":slug.current,
+  summary,
+   technology,
   description,
     live,
     github,

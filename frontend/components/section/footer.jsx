@@ -11,7 +11,9 @@ const Footer = () => {
         <ul className="flex items-center justify-center gap-4">
           <li>
             <Link
-              href={"https://www.linkedin.com/in/dikshit-bhardwaj-8678b2191/"}
+              href={
+                "https://instagram.com/dikshitbhardwaj.in?igshid=MmVlMjlkMTBhMg==https://instagram.com/dikshitbhardwaj.in?igshid=MmVlMjlkMTBhMg=="
+              }
               target="_blank"
             >
               <IoLogoInstagram className="w-8 h-8 text-gray-600 cursor-pointer" />
