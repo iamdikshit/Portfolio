@@ -24,6 +24,7 @@ const ProjectDetail = ({ data }) => {
               className="w-full h-full object-cover"
               width={100}
               height={100}
+              alt={data.name}
             />
           </div>
           <div className="shortDetail-section shadow-md md:col-span-2 p-4 flex flex-col gap-8">

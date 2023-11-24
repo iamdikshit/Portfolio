@@ -21,6 +21,7 @@ const Card = (props) => {
             className="group w-full h-full object-cover  "
             width={300}
             height={100}
+            alt={props.data.name}
           />
         </div>
         <div className="card-details p-4 flex flex-col  gap-6">
