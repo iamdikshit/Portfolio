@@ -6,11 +6,13 @@ import Link from "next/link";
 import PortableText from "react-portable-text";
 const ProjectDetail = ({ data }) => {
   let img;
+
   if (data.media.images.length > 1) {
     img = urlFor(data.media.images[1] && data.media.images[1]).url();
   } else {
     img = urlFor(data.media.images[0] && data.media.images[0]).url();
   }
+
   return (
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-24  ">
       <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
@@ -24,7 +26,7 @@ const ProjectDetail = ({ data }) => {
               className="w-full h-full object-cover"
               width={100}
               height={100}
-              alt={data.name}
+              alt={data?.name}
             />
           </div>
           <div className="shortDetail-section shadow-md md:col-span-2 p-4 flex flex-col gap-8">
@@ -33,19 +35,19 @@ const ProjectDetail = ({ data }) => {
                 <tr className="border-b-2">
                   <td className="text-base p-4">Role</td>
                   <td className="text-base p-4 border-l-2">
-                    {data.role ? data.role : "NA"}
+                    {data?.role ? data.role : "NA"}
                   </td>
                 </tr>
                 <tr className="border-b-2">
                   <td className="text-base p-4">Start Date</td>
                   <td className="text-base p-4 border-l-2">
-                    {data.duration ? data.duration.start : "NA"}
+                    {data?.duration ? data.duration?.start : "NA"}
                   </td>
                 </tr>
                 <tr className="border-b-2">
                   <td className="text-base p-4">End Date</td>
                   <td className="text-base p-4 border-l-2">
-                    {data.duration.present
+                    {data.duration?.present
                       ? "Currently Working"
                       : data.duration.end}
                   </td>
@@ -53,7 +55,7 @@ const ProjectDetail = ({ data }) => {
               </tbody>
             </table>
             <div className="flex items-center justify-center md:justify-start flex-wrap gap-2 mt-auto">
-              <TechCard technologies={data.technology} />
+              <TechCard technologies={data?.technology} />
             </div>
             <div className="group-btn flex gap-8 mb-8 mt-auto items-center justify-center xl:justify-start">
               {data.github && (
