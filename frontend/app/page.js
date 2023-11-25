@@ -41,7 +41,7 @@ export default async function Home() {
 }
 
 async function getProject() {
-  const query = `*[_type=="project" && isactive==true][0...3]{
+  const query = `*[_type=="project" && isactive==true][0...4]{
   name,
   "slug":slug.current,
   summary,

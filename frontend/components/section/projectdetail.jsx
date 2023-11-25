@@ -22,10 +22,9 @@ const ProjectDetail = ({ data }) => {
           <div className="image-section w-full h-96 md:col-span-3 shadow-md">
             <Image
               src={img}
-              className="w-full h-full "
+              className="w-full h-full object-cover "
               width={900}
               height={500}
-              objectFit="cover"
               alt={data?.name}
             />
           </div>
