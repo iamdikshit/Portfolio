@@ -1,3 +1,4 @@
+"use client";
 import { ProjectDetail } from "@/components/section";
 import { client } from "@/utils/client";
 export default async function DetailedProject({ params }) {

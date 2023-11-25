@@ -14,7 +14,12 @@ const Nav = () => {
   return (
     <header className="h-20 relative md:h-24 flex items-center justify-between bg-transparent px-4 md:px-16 lg:px-28 ">
       <Link href={"/"}>
-        <Image src={images.logo1} width={200} height={100} />
+        <Image
+          src={images.logo1}
+          width={200}
+          height={100}
+          alt="Dikshit Bhardwaj Logo"
+        />
       </Link>
 
       {showMenu ? (

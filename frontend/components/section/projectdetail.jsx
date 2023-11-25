@@ -6,7 +6,6 @@ import Link from "next/link";
 import PortableText from "react-portable-text";
 const ProjectDetail = ({ data }) => {
   let img;
-
   if (data.media.images.length > 1) {
     img = urlFor(data.media.images[1] && data.media.images[1]).url();
   } else {
@@ -20,12 +19,13 @@ const ProjectDetail = ({ data }) => {
       </h1>
       <div className="project-detail mt-16">
         <div className="top-section grid md:grid-cols-5 gap-4">
-          <div className="image-section w-full h-96 md:col-span-3">
+          <div className="image-section w-full h-96 md:col-span-3 shadow-md">
             <Image
               src={img}
-              className="w-full h-full object-cover"
-              width={100}
-              height={100}
+              className="w-full h-full "
+              width={900}
+              height={500}
+              objectFit="cover"
               alt={data?.name}
             />
           </div>

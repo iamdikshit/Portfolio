@@ -1,6 +1,6 @@
 // import Image from "next/image";
+"use client";
 import { Blob, Card } from "@/components/ui";
-
 import { client } from "@/utils/client";
 export default async function Project() {
   const { projectdata } = await getProject();
