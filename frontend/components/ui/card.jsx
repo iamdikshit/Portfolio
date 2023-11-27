@@ -6,7 +6,7 @@ const Card = (props) => {
   return (
     <div className={`card-1 shadow-md bg-gray-100`}>
       <div className="inner-card flex gap-8 flex-col xl:flex-row xl:gap-2  ">
-        <div className="card-pic w-full h-96  xl:w-[40rem] xl:h-auto m-2  overflow-hidden relative ">
+        <div className="card-pic w-full h-full  xl:w-[40rem] xl:h-auto m-2  overflow-hidden relative ">
           <div className="group absolute w-full h-full bg-transparent top-0 left-0 ">
             <div className="w-full h-full bg-black/50 backdrop-opacity-10 -translate-x-[100%] group-hover:translate-x-[0] transition-all ease-in duration-150 flex items-center justify-center">
               <Link href={`/project/${props.data.slug}`}>
@@ -24,7 +24,7 @@ const Card = (props) => {
             alt={props.data.name}
           />
         </div>
-        <div className="card-details p-4 flex flex-col  gap-6">
+        <div className="card-details p-4 flex flex-col   gap-6">
           <Link href={`/project/${props.data.slug}`}>
             <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-center xl:text-start">
               {props.data?.title}
@@ -37,13 +37,13 @@ const Card = (props) => {
           </div>
 
           {/* description */}
-          <div className="description">
+          <div className="description mt-auto">
             <p className="text-sm xl:text-base text-gray-900 text-center xl:text-start">
               {props.data?.summary?.slice(0, 100)}...
             </p>
           </div>
 
-          <div className="group-btn flex gap-8 mb-8 mt-auto items-center justify-center xl:justify-start">
+          <div className="group-btn flex gap-8 mb-8 mt-auto items-center justify-center xl:justify-start ">
             {props.data.github && (
               <Link href={props?.data?.github} target="_blank">
                 <Button

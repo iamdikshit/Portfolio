@@ -14,8 +14,12 @@ const Button = (props) => {
     );
   else
     return (
-      <button onClick={props.onClick} className={props.classess}>
-        {props.text}
+      <button
+        onClick={props.onClick}
+        className={`${props.classess} flex items-center justify-center gap-1`}
+      >
+        <span className="block ">{props.text}</span>
+        <span className="block">{props.icon}</span>
       </button>
     );
 };

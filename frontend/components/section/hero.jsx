@@ -42,7 +42,6 @@ const Hero = ({ data }) => {
             ]}
             wrapper="span"
             speed={10}
-            style={{}}
             repeat={Infinity}
           />
 
@@ -57,6 +56,7 @@ const Hero = ({ data }) => {
             >
               <Button
                 text={"Say Hello"}
+                icon={"👋"}
                 classess={
                   "text-sm lg:text-base px-8 py-4 text-white font-bold bg-black border-solid border-2 border-black rounded-xl hover:text-black hover:bg-white transition-all ease-in-out  "
                 }
@@ -86,14 +86,16 @@ const Hero = ({ data }) => {
             />
 
             <SmallCards
-              position={"-top-10 left-24 sm:left-36 md:left-24 lg:left-44"}
+              position={"-top-10 left-24 sm:left-36 md:left-24 lg:left-44  "}
               img={images.htmlpic}
               text={"HTML"}
               alt={"HTML"}
             />
 
             <SmallCards
-              position={"top-10 left-1 sm:left-20 md:left-1 lg:left-20"}
+              position={
+                "top-10 left-1 sm:left-20 md:left-1 lg:left-20 xl:left-2 "
+              }
               img={images.CSSLogo}
               text={"CSS"}
               alt={"CSS"}
@@ -101,14 +103,16 @@ const Hero = ({ data }) => {
 
             <SmallCards
               position={
-                "-top-6 right-1 sm:right-24 md:right-1 lg:right-48 lg:-top-10"
+                "-top-6 right-1 sm:right-24 md:right-1 lg:right-48 lg:-top-10 xl:right-24 xl:-top-10"
               }
               img={images.Jslogo}
               text={"Javascript"}
               alt={"Javacript logos"}
             />
             <SmallCards
-              position={"top-16 right-1 sm:right-16 md:right-1 lg:right-16"}
+              position={
+                "top-16 right-1 sm:right-16 md:right-1 lg:right-16 xl:right-2 "
+              }
               img={images.reactlogo}
               text={"ReactJs"}
               alt={"React logos"}

@@ -4,6 +4,7 @@ import { TechCard, Button } from "../ui";
 import { urlFor } from "@/utils/client";
 import Link from "next/link";
 import PortableText from "react-portable-text";
+import { Blob } from "../ui";
 const ProjectDetail = ({ data }) => {
   let img;
   if (data.media.images.length > 1) {
@@ -14,7 +15,27 @@ const ProjectDetail = ({ data }) => {
 
   return (
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-24  ">
-      <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+      <Blob
+        classess={
+          "bg-red-200 opacity-70 top-0 right-96  animate-blob-bounce blur-2xl "
+        }
+      />
+      <Blob
+        classess={
+          "bg-yellow-200 opacity-70 top-24 right-56 animate-blob-bounce blur-2xl "
+        }
+      />
+
+      <Blob
+        classess={
+          "bg-blue-200 opacity-70 top-0 right-20 animate-blob-bounce blur-2xl "
+        }
+      />
+      <h1 className="text-2xl md:text-3xl font-semibold uppercase">Project</h1>
+      <p className="text-sm md:text-base text-gray-600 mt-6">
+        "Web Development Adventures: A Glimpse into My Creative World"
+      </p>
+      <h1 className="font-medium  text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-16">
         {data?.name}
       </h1>
       <div className="project-detail mt-16">

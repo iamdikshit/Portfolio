@@ -1,5 +1,5 @@
 "use client";
-import { ProjectDetail } from "@/components/section";
+import { Connect, ProjectDetail } from "@/components/section";
 import { client } from "@/utils/client";
 export default async function DetailedProject({ params }) {
   const slug = params.slug;
@@ -8,6 +8,7 @@ export default async function DetailedProject({ params }) {
   return (
     <>
       <ProjectDetail data={projectdata[0]} />
+      <Connect />
     </>
   );
 }
