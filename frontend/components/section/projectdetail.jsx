@@ -46,7 +46,7 @@ const ProjectDetail = ({ data }) => {
               className="w-full h-full object-cover "
               width={900}
               height={500}
-              alt={data?.name}
+              alt={data.name ? data.name : "project image"}
             />
           </div>
           <div className="shortDetail-section shadow-md md:col-span-2 p-4 flex flex-col gap-8">

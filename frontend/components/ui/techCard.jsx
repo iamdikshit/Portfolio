@@ -7,7 +7,7 @@ const TechCard = ({ technologies }) => {
         ? technologies.map((tech, index) => (
             <span
               key={index}
-              className="text-[12px] self-center  px-2 bg-green-600 text-white rounded-full"
+              className="px-2 py-1 text-[.5rem] md:text-xs text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"
             >
               {tech}
             </span>

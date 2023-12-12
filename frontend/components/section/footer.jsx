@@ -6,7 +6,7 @@ import {
 import Link from "next/link";
 const Footer = () => {
   return (
-    <footer className="px-4 relative grid grid-cols-1 gap-8 sm:grid-cols-2 py-24  md:px-16 lg:px-28 mx-0 mt-36">
+    <footer className="px-4 relative grid grid-cols-1  gap-8  py-24  md:px-16 lg:px-28 mx-0 mt-36">
       <div className="social">
         <ul className="flex items-center justify-center gap-4">
           <li>
@@ -36,7 +36,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="copyright ">
+      <div className="copyright text-center ">
         <p className="text-sm md:text-base text-gray-600">
           {`Copyright © ${new Date().getFullYear()}. Designed by Dikshit Bhardwaj All rights reserved.`}
         </p>

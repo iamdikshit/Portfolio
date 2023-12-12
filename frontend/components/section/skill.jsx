@@ -39,7 +39,7 @@ const Skill = ({ skillData }) => {
         </div>
         <div className="mt-8 flex items-center justify-center">
           <p className="text-sm relative md:text-base lg:text-lg text-gray-600">
-            <span className="md:absolute static -top-5 -left-6">
+            <span className="md:absolute static -top-5 -left-6 hidden">
               <Image
                 src={images.quotation}
                 width={30}
@@ -47,6 +47,7 @@ const Skill = ({ skillData }) => {
                 alt={"quotation"}
               />
             </span>
+            <span className="text-4xl font-bold text-gray-600">"</span>
             As a Full Stack Web Developer, I possess a comprehensive skill set
             encompassing the entire web development spectrum. I excel in both
             frontend and backend development, creating responsive user

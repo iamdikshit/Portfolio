@@ -9,7 +9,7 @@ const SkillCard = (props) => {
         src={props?.image}
         width={props.width}
         height={props.height}
-        alt={props.text}
+        alt={props.text ? props.text : "skill card image"}
       />
       <h1 className={`text-sm`}>{props.text}</h1>
     </div>

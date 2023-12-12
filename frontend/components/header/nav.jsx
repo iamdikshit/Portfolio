@@ -18,7 +18,7 @@ const Nav = () => {
           src={images.logo1}
           width={200}
           height={100}
-          alt="Dikshit Bhardwaj Logo"
+          alt={"Dikshit Bhardwaj Logo"}
         />
       </Link>
 
