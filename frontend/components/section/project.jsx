@@ -6,7 +6,7 @@ const Project = ({ projectdata }) => {
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
       <Blob
         classess={
-          "bg-red-200 opacity-70 top-0 -left-20 animate-blob-bounce blur-2xl "
+          "bg-pink-300 opacity-70 top-0 -left-20 animate-blob-bounce blur-2xl "
         }
       />
       <h1 className="text-2xl md:text-3xl font-semibold uppercase">Projects</h1>

@@ -7,17 +7,17 @@ const Skill = ({ skillData }) => {
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36">
       <Blob
         classess={
-          "bg-pink-200 opacity-70 top-20 left-20 animate-blob-bounce blur-2xl "
+          "bg-pink-400 opacity-70 top-20 left-20 animate-blob-bounce blur-2xl  "
         }
       />
       <Blob
         classess={
-          "bg-yellow-200 opacity-70 top-20 left-72 animate-blob-bounce blur-2xl "
+          "bg-yellow-400 opacity-70 top-20 left-72 animate-blob-bounce blur-2xl "
         }
       />
       <Blob
         classess={
-          "bg-green-200 opacity-70 top-44 left-44 animate-blob-bounce delay-150  blur-2xl "
+          "bg-green-400 opacity-70 top-44 left-44 animate-blob-bounce delay-150  blur-2xl "
         }
       />
       <h1 className="text-2xl md:text-3xl font-semibold uppercase">Skills</h1>

@@ -33,7 +33,7 @@ const Hero = ({ data }) => {
             className="text-3xl  lg:text-5xl font-bold bg-gradient-to-b from-[#5b1aaa] to-[#00d4ff] bg-clip-text text-transparent pb-2  "
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              "Full Stack Develper.",
+              "Full Stack Developer.",
               1000, // wait 1s before replacing "Mice" with "Hamsters"
               "Code Creator.",
               1000,

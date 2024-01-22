@@ -5,18 +5,18 @@ const Connect = ({ data }) => {
     <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
       <Blob
         classess={
-          "bg-red-200 opacity-70 top-0 left-96  animate-blob-bounce blur-2xl "
+          "bg-pink-300 opacity-70 top-0 left-96  animate-blob-bounce blur-2xl "
         }
       />
       <Blob
         classess={
-          "bg-yellow-200 opacity-70 top-24 left-56 animate-blob-bounce blur-2xl "
+          "bg-yellow-300 opacity-70 top-24 left-56 animate-blob-bounce blur-2xl "
         }
       />
 
       <Blob
         classess={
-          "bg-blue-200 opacity-70 top-0 left-20 animate-blob-bounce blur-2xl "
+          "bg-blue-300 opacity-70 top-0 left-20 animate-blob-bounce blur-2xl "
         }
       />
       <div className="flex flex-col mt-24 items-center justify-center gap-8 lg:gap-16 px-8 sm:px-16 md:px-24 lg:px-44">
