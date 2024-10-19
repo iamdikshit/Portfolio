@@ -16,7 +16,7 @@ const Hero = ({ data }) => {
     setIsLoading(false);
   };
   return (
-    <section className="hero relative px-4 md:px-16 lg:px-28 mt-32 ">
+    <section className="hero container mx-auto relative px-4 md:px-16 lg:px-28 mt-32 ">
       {isLoading && <Loader />}
       <div className="inner-herosection relative grid grid-cols-1 gap-44 md:grid-cols-2 md:gap-12 mx-auto mt-24">
         <Blob
@@ -76,7 +76,11 @@ const Hero = ({ data }) => {
         {/* // Right section */}
         <div className="left-right   ">
           <div className="inner-right relative flex items-center justify-center">
-            <Blob classess={"bg-orange-300 blur-xl animate-blob  "} />
+            <Blob
+              classess={
+                "bg-gradient-to-r from-pink-600 via-purple-400 to-purple-600 blur-xl animate-blob  "
+              }
+            />
             <Image
               className="rounded-full shadow-2xl"
               src={data?.image}

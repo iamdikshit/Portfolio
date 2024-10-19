@@ -3,7 +3,7 @@ import { Card, Button, Blob } from "@/components/ui";
 import Link from "next/link";
 const Project = ({ projectdata }) => {
   return (
-    <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
+    <section className="px-4 container mx-auto relative md:px-16 lg:px-28  mt-36 ">
       <Blob
         classess={
           "bg-pink-300 opacity-70 top-0 -left-20 animate-blob-bounce blur-2xl "

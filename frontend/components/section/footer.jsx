@@ -11,9 +11,7 @@ const Footer = () => {
         <ul className="flex items-center justify-center gap-4">
           <li>
             <Link
-              href={
-                "https://instagram.com/dikshitbhardwaj.in?igshid=MmVlMjlkMTBhMg==https://instagram.com/dikshitbhardwaj.in?igshid=MmVlMjlkMTBhMg=="
-              }
+              href={"https://www.instagram.com/codingshhala/"}
               target="_blank"
             >
               <IoLogoInstagram className="w-8 h-8 text-gray-600 cursor-pointer" />
@@ -30,6 +28,7 @@ const Footer = () => {
           <li>
             <Link
               href={"https://www.youtube.com/channel/UCIVFg-OLeI02bdDBq180CiA"}
+              target="_blank"
             >
               <IoLogoYoutube className="w-8 h-8 text-gray-600 cursor-pointer" />
             </Link>

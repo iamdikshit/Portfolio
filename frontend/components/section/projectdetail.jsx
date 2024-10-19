@@ -14,7 +14,7 @@ const ProjectDetail = ({ data }) => {
   }
 
   return (
-    <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-24  ">
+    <section className="px-4 container mx-auto relative md:px-16 lg:px-28 mt-24  ">
       <Blob
         classess={
           "bg-red-200 opacity-70 top-0 right-96  animate-blob-bounce blur-2xl "

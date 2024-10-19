@@ -5,7 +5,7 @@ import { client } from "@/utils/client";
 export default async function Project() {
   const { projectdata } = await getProject();
   return (
-    <section className="px-4 relative md:px-16 lg:px-28 mx-0 mt-36 ">
+    <section className="px-4 container mx-auto relative md:px-16 lg:px-28  mt-36 ">
       <Blob
         classess={
           "bg-red-200 opacity-70 top-0 -left-20 animate-blob-bounce blur-2xl "
